@@ -68,7 +68,6 @@ def paytm_product(search):
 def product_list(request):
     if request.GET:
         searchfield = request.GET.get('searchfield')
-        print("searchfield-----------------", searchfield)
                 
         if not Product.objects.filter(ProductName__icontains=searchfield).exists() :
             t1 = Thread(target=shopclues_product, args=(searchfield, ))
