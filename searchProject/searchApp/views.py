@@ -43,7 +43,7 @@ def paytm_product(search):
     
     product_json_data = product_data.json()
 
-    for page in range(1,10):
+    for page in range(1,101):
         payload = {
             "userQuery": search,
             "page_count": page,
